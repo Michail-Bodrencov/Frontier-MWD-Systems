@@ -129,7 +129,9 @@ body::-webkit-scrollbar {
   top: 0;
   z-index: -1;
   stroke: #FFCB05;
-  fill: none;
+}
+.intro__svg--disable {
+  z-index: -4;
 }
 .intro__content {
   font-family: "Open Sans", sans-serif;
@@ -153,9 +155,9 @@ body::-webkit-scrollbar {
 }
 .intro_image {
   position: absolute;
-  left: -30px;
+  left: -150px;
   bottom: -30px;
-  z-index: -3;
+  z-index: -1;
   width: 110vw;
   transform: scale(1.5);
   transform: rotate(-10deg);
@@ -165,6 +167,7 @@ body::-webkit-scrollbar {
   transition: opacity 1s;
   stroke: #FFCB05;
   stroke-width: 2;
+  fill: none;
   opacity: 1;
 }
 .intro__ring__2 {
@@ -179,7 +182,10 @@ body::-webkit-scrollbar {
 .intro__ring--hide {
   opacity: 0;
 }
-.intro__ring--disabled {
+.intro__ring--disable {
+  opacity: 0.2;
+  stroke-width: 3px;
+  z-index: -5;
   stroke: #5C6266;
 }
 

@@ -134,11 +134,11 @@ $headerHeight:80px;
         z-index: -1;
         stroke: $yellow;
 
-        
+        &--disable {
+            z-index: -4;
+        }
     }
-    &__inner {
-        
-    }
+    
     &__content {
         font-family: $OpenSans;
         margin-top: 27.1vh;
@@ -164,9 +164,9 @@ $headerHeight:80px;
 
     &_image {
         position: absolute;
-        left: -30px;
+        left: -150px;
         bottom: -30px;
-        z-index: -3;
+        z-index: -1;
         width: 110vw;
         
         // transform: translate3d(0,20%,0);
@@ -179,6 +179,7 @@ $headerHeight:80px;
         transition: opacity 1s;
         stroke: $yellow;
         stroke-width: 2;
+        fill:none;
         opacity: 1;
         &__2 {
             opacity: .7;
@@ -193,7 +194,10 @@ $headerHeight:80px;
         &--hide {
             opacity: 0;
         }
-        &--disabled{
+        &--disable{
+            opacity: 0.2;
+            stroke-width: 3px;
+            z-index: -5;
             stroke: $BurgerBtnColor;
         }
     }

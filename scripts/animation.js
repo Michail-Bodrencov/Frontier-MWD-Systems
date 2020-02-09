@@ -47,16 +47,16 @@ const Ring4 = new Ring('.intro__ring__4');
 
 let interval1 = setInterval(()=>{
 
-    checkRingAnimation(Ring1, 6, 20, 13, 15, 0.2)
+    checkRingAnimation(Ring1, 6, 20, 13, 15, 0.096)
     
     
     
-    checkRingAnimation(Ring2, 6, 50, 13, 45, 0.17)
+    checkRingAnimation(Ring2, 6, 50, 13, 45, 0.078)
     
 
-    checkRingAnimation(Ring3, 6, 70, 13, 65, 0.14)
+    checkRingAnimation(Ring3, 6, 70, 13, 65, 0.037)
 
-    checkRingAnimation(Ring4, 6, 100, 13, 95, 0.1)
+    checkRingAnimation(Ring4, 6, 100, 13, 95, 0.02)
 
 },30)
 
