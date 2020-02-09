@@ -19,9 +19,10 @@ body {
 .container {
     width: 100%; 
 }
+$headerHeight:80px;
 
 .header{
-    $headerHeight:80px;
+    
 
     display: flex;
     width: 100%;
@@ -92,6 +93,9 @@ body {
     }
     &__phone {
         font-family: $OpenSans;
+        color: inherit;
+        text-decoration: none;
+        text-transform: uppercase;
         font-weight: 400;
         margin-left: 45px;
 
@@ -106,5 +110,50 @@ body {
 }
 
 .intro {
+    height: 100vh;
+    overflow: hidden;
+    padding-top: $headerHeight;
+    color: #fff;
+    position: relative;
     
+
+    &__svg {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        stroke: $yellow;
+    }
+    &__inner {
+        
+    }
+    &__content {
+        font-family: $OpenSans;
+        margin-top: 27.1vh;
+        margin-left: 160px;
+        z-index: 30;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 96px;
+        line-height: 140%;
+        &__first-word {
+            color: $yellow;
+        }
+    }
+
+    &__subtext {
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 204.27%;
+        max-width: 1100px;
+    }
+
+}
+
+#intro_test{
+    background-color: #fff;
 }
