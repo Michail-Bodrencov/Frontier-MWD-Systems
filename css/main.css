@@ -129,6 +129,7 @@ body::-webkit-scrollbar {
   top: 0;
   z-index: -1;
   stroke: #FFCB05;
+  fill: none;
 }
 .intro__content {
   font-family: "Open Sans", sans-serif;
@@ -158,6 +159,28 @@ body::-webkit-scrollbar {
   width: 110vw;
   transform: scale(1.5);
   transform: rotate(-10deg);
+}
+.intro__ring {
+  opacity: 0.75;
+  transition: opacity 1s;
+  stroke: #FFCB05;
+  stroke-width: 2;
+  opacity: 1;
+}
+.intro__ring__2 {
+  opacity: 0.7;
+}
+.intro__ring__3 {
+  opacity: 0.45;
+}
+.intro__ring__4 {
+  opacity: 0.15;
+}
+.intro__ring--hide {
+  opacity: 0;
+}
+.intro__ring--disabled {
+  stroke: #5C6266;
 }
 
 #intro_test {

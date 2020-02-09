@@ -1,5 +1,6 @@
 @import 'colors&fonts';
 @import 'mixins';
+@import 'animations';
 
 * {
     &,&::after,&::before {
@@ -132,6 +133,8 @@ $headerHeight:80px;
         top: 0;
         z-index: -1;
         stroke: $yellow;
+
+        
     }
     &__inner {
         
@@ -171,7 +174,34 @@ $headerHeight:80px;
         transform: rotate(-10deg);
     }
 
+    &__ring{
+        opacity: 0.75;
+        transition: opacity 1s;
+        stroke: $yellow;
+        stroke-width: 2;
+        opacity: 1;
+        &__2 {
+            opacity: .7;
+        }
+        &__3 {
+            opacity: .45;
+        }
+        &__4 {
+            opacity: .15;
+        }
+    
+        &--hide {
+            opacity: 0;
+        }
+        &--disabled{
+            stroke: $BurgerBtnColor;
+        }
+    }
+
 }
+
+
+
 
 #intro_test{
     background-color: #fff;
