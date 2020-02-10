@@ -49,7 +49,13 @@ body::-webkit-scrollbar {
   height: 100%;
 }
 .container__p80 {
+  padding: 0 80px;
+}
+.container__p80-border {
   padding: 0 78px;
+}
+.container__p160 {
+  padding: 0 160px;
 }
 
 .header {
@@ -225,8 +231,33 @@ body::-webkit-scrollbar {
   width: 100%;
 }
 
-.about__us {
-  height: 100%;
+.about_us {
   border-left: 2px solid #F6F6F6;
   border-right: 2px solid #F6F6F6;
+  color: #101010;
+}
+.about_us__part {
+  border: 1px solid black;
+}
+.about_us__part--1 {
+  margin-top: 100px;
+  height: 30%;
+}
+.about_us__part--2 {
+  height: 70%;
+}
+.about_us__title {
+  text-transform: uppercase;
+}
+.about_us__title--1 {
+  font-size: 18px;
+  color: #101010;
+  margin-bottom: 60px;
+}
+.about_us__title--2 {
+  color: #fff;
+}
+.about_us__content {
+  font-size: 25px;
+  line-height: 204.27%;
 }

@@ -29,7 +29,13 @@ body::-webkit-scrollbar {
     height: 100%;
     
     &__p80 {
-        padding: 0 78px;
+            padding: 0 80px;
+        &-border {
+            padding: 0 78px;
+        }
+    }
+    &__p160{
+        padding: 0 160px;
     }
 }
 $headerHeight:80px;
@@ -242,12 +248,42 @@ $headerHeight:80px;
     width: 100%;
 }
 
-.about__us{
-    height: 100%;
+.about_us{
+    
     border-left: 2px solid $whiteGrey;
     border-right: 2px solid $whiteGrey;
-    
-    
+    color: $black;
+
+    &__part{
+        
+        border: 1px solid black;
+
+        &--1{
+            margin-top: 100px;
+            height: 30%;
+        }
+        &--2{
+            height: 70%;
+            
+        }
+    }
+
+    &__title {
+        text-transform: uppercase;
+        &--1{
+            font-size: 18px;
+            color: $black;
+            margin-bottom: 60px;
+        }
+        &--2{
+            color: $white;
+        }
+    }
+
+    &__content{
+        font-size: 25px;
+        line-height: 204.27%;
+    }
 }
 
 
