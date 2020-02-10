@@ -46,19 +46,30 @@ body::-webkit-scrollbar {
 
 .container {
   width: 100%;
+  height: 100%;
+}
+.container__p80 {
+  padding: 0 78px;
 }
 
 .header {
+  position: fixed;
   display: flex;
   width: 100%;
   height: 80px;
-  position: absolute;
   left: 0;
   top: 0;
   z-index: 15;
+  transition: background 0.2s ease-in, border 0.2s ease-in;
 }
 .header--white {
   color: #fff;
+  border-bottom: 2px solid transparent;
+}
+.header--black {
+  color: #5C6266;
+  border-bottom: 2px solid #F6F6F6;
+  background-color: #fff;
 }
 .header__burger {
   position: absolute;
@@ -123,12 +134,18 @@ body::-webkit-scrollbar {
   font-weight: 700;
 }
 
-.intro {
+.screen {
   height: 100vh;
   overflow: hidden;
+  position: relative;
+}
+.screen--white {
+  background-color: #fff;
+}
+
+.intro {
   padding-top: 80px;
   color: #fff;
-  position: relative;
 }
 .intro__svg {
   position: absolute;
@@ -197,6 +214,13 @@ body::-webkit-scrollbar {
   stroke: #5C6266;
 }
 
-#intro_test {
-  background-color: #fff;
+.section {
+  height: 100%;
+  width: 100%;
+}
+
+.about__us {
+  height: 100%;
+  border-left: 2px solid #F6F6F6;
+  border-right: 2px solid #F6F6F6;
 }

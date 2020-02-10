@@ -25,23 +25,38 @@ body::-webkit-scrollbar {
 
 
 .container {
-    width: 100%; 
+    width: 100%;
+    height: 100%;
+    
+    &__p80 {
+        padding: 0 78px;
+    }
 }
 $headerHeight:80px;
 
 .header{
-    
+    position: fixed;
 
     display: flex;
     width: 100%;
     height: $headerHeight;
-    position: absolute;
+    // position: absolute;
     left: 0;
     top: 0;
     z-index: 15;
 
+    transition: background .2s ease-in,
+                border .2s ease-in;
+
     &--white {
         color: $white;
+        border-bottom: 2px solid transparent;   
+    }
+
+    &--black{
+        color: $BurgerBtnColor;
+        border-bottom: 2px solid $whiteGrey;
+        background-color: $white;
     }
 
     &__burger {
@@ -116,13 +131,21 @@ $headerHeight:80px;
         }
     }
 }
-
-.intro {
+.screen {
     height: 100vh;
     overflow: hidden;
+    position: relative;
+
+    &--white {
+        background-color: $white;
+    }
+}
+.intro {
+    // height: 100vh;
+    // overflow: hidden;
     padding-top: $headerHeight;
     color: #fff;
-    position: relative;
+    // position: relative;
     
 
     &__svg {
@@ -206,9 +229,17 @@ $headerHeight:80px;
 
 }
 
-
-
-
-#intro_test{
-    background-color: #fff;
+.section{
+    height: 100%;
+    width: 100%;
 }
+
+.about__us{
+    height: 100%;
+    border-left: 2px solid $whiteGrey;
+    border-right: 2px solid $whiteGrey;
+    
+    
+}
+
+
