@@ -48,15 +48,19 @@ $headerHeight:80px;
     transition: background .2s ease-in,
                 border .2s ease-in;
 
-    &--white {
+    &--black {
         color: $white;
         border-bottom: 2px solid transparent;   
     }
 
-    &--black{
+    &--white{
         color: $BurgerBtnColor;
         border-bottom: 2px solid $whiteGrey;
         background-color: $white;
+
+        .header__logo__svg {
+            fill: $BurgerBtnColor;
+        }
     }
 
     &__burger {
@@ -97,6 +101,10 @@ $headerHeight:80px;
     }
     &__logo {
         margin: 0 97px 0 22px;
+
+        &__svg{
+            fill: $white;
+        }
     }
 
     &__nav {

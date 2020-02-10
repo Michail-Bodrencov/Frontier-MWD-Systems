@@ -62,14 +62,17 @@ body::-webkit-scrollbar {
   z-index: 15;
   transition: background 0.2s ease-in, border 0.2s ease-in;
 }
-.header--white {
+.header--black {
   color: #fff;
   border-bottom: 2px solid transparent;
 }
-.header--black {
+.header--white {
   color: #5C6266;
   border-bottom: 2px solid #F6F6F6;
   background-color: #fff;
+}
+.header--white .header__logo__svg {
+  fill: #5C6266;
 }
 .header__burger {
   position: absolute;
@@ -104,6 +107,9 @@ body::-webkit-scrollbar {
 }
 .header__logo {
   margin: 0 97px 0 22px;
+}
+.header__logo__svg {
+  fill: #fff;
 }
 .header__nav {
   display: flex;
