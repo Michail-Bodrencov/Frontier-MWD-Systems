@@ -1,35 +1,56 @@
 @font-face {
-  font-family: "TT Firs Neue";
+  font-family: 'TT Firs Neue';
   src: local("../fonts/TTFirsNeue-Bold/TT Firs Neue Bold"), local("TT-Firs-Neue-Bold"), url("../fonts/TTFirsNeue-Bold/TTFirsNeue-Bold.woff2") format("woff2"), url("../fonts/TTFirsNeue-Bold/TTFirsNeue-Bold.woff") format("woff"), url("../fonts/TTFirsNeue-Bold/TTFirsNeue-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
+
 @font-face {
-  font-family: "Gotham Pro";
+  font-family: 'Gotham Pro';
   src: local("../fonts/GothamPro-Bold/Gotham Pro Bold"), local("Gotham-Pro-Bold"), url("../fonts/GothamPro-Bold/GothamPro-Bold.woff2") format("woff2"), url("../fonts/GothamPro-Bold/GothamPro-Bold.woff") format("woff"), url("../fonts/GothamPro-Bold/GothamPro-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
+
 @font-face {
-  font-family: "Avenir Next Cyr Bold";
+  font-family: 'Avenir Next Cyr Bold';
   src: url("../fonts/Avenir-Next-Cyr-Bold/AvenirNextCyr-Bold.eot");
   src: url("AvenirNextCyr-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Avenir-Next-Cyr-Bold/AvenirNextCyr-Bold.woff") format("woff"), url("../fonts/Avenir-Next-Cyr-Bold/AvenirNextCyr-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
-@keyframes introDrill {
+
+@-webkit-keyframes introDrill {
   0%, 100% {
-    transform: translate3d(0%, 10%, 0);
+    -webkit-transform: translate3d(0%, 10%, 0);
+            transform: translate3d(0%, 10%, 0);
   }
   50% {
-    transform: translate3d(0%, 0%, 0);
-    transform: rotate(-10deg);
+    -webkit-transform: translate3d(0%, 0%, 0);
+            transform: translate3d(0%, 0%, 0);
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
   }
 }
+
+@keyframes introDrill {
+  0%, 100% {
+    -webkit-transform: translate3d(0%, 10%, 0);
+            transform: translate3d(0%, 10%, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(0%, 0%, 0);
+            transform: translate3d(0%, 0%, 0);
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+}
+
 *, *::after, *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -48,43 +69,60 @@ body::-webkit-scrollbar {
   width: 100%;
   height: 100%;
 }
+
 .container__p80 {
   padding: 0 80px;
 }
+
 .container__p80-border {
   padding: 0 78px;
 }
+
 .container__p160 {
   padding: 0 160px;
 }
 
 .header {
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 80px;
   left: 0;
   top: 0;
   z-index: 15;
-  transition: background 0.2s ease-in, border 0.2s ease-in;
+  -webkit-transition: background .2s ease-in, border .2s ease-in;
+  transition: background .2s ease-in, border .2s ease-in;
 }
+
 .header--black {
   color: #fff;
   border-bottom: 2px solid transparent;
 }
+
 .header--white {
   color: #5C6266;
   border-bottom: 2px solid #F6F6F6;
   background-color: #fff;
 }
+
 .header--white .header__logo__svg {
   fill: #5C6266;
 }
+
 .header__burger {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   left: 0;
   top: 0;
   padding: 30px;
@@ -92,6 +130,7 @@ body::-webkit-scrollbar {
   width: 80px;
   background-color: #5C6266;
 }
+
 .header__burger--line {
   display: block;
   width: 20px;
@@ -99,29 +138,46 @@ body::-webkit-scrollbar {
   background: #fff;
   margin-bottom: 4px;
 }
+
 .header__inner {
   height: 100%;
   padding: 0 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 .header__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   height: 100%;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .header__logo {
   margin: 0 97px 0 22px;
 }
+
 .header__logo__svg {
   fill: #fff;
 }
+
 .header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   color: inherit;
   font-size: 14px;
 }
+
 .header__link {
   color: inherit;
   font-family: "Open Sans", sans-serif;
@@ -131,6 +187,7 @@ body::-webkit-scrollbar {
   text-decoration: none;
   margin-right: 65px;
 }
+
 .header__phone {
   font-family: "Open Sans", sans-serif;
   color: inherit;
@@ -139,9 +196,11 @@ body::-webkit-scrollbar {
   font-weight: 400;
   margin-left: 45px;
 }
+
 .header__phone:first-child {
   margin-left: 0;
 }
+
 .header__phone--name {
   font-weight: 700;
 }
@@ -151,6 +210,7 @@ body::-webkit-scrollbar {
   overflow: hidden;
   position: relative;
 }
+
 .screen--white {
   background-color: #fff;
 }
@@ -159,6 +219,7 @@ body::-webkit-scrollbar {
   padding-top: 80px;
   color: #fff;
 }
+
 .intro__svg {
   position: absolute;
   height: 100%;
@@ -167,58 +228,73 @@ body::-webkit-scrollbar {
   top: 0;
   z-index: -1;
 }
+
 .intro__svg--disable {
   z-index: -4;
 }
+
 .intro__content {
   font-family: "Open Sans", sans-serif;
   margin-top: 27.1vh;
   margin-left: 160px;
   z-index: 30;
 }
+
 .intro__title {
   font-weight: bold;
   font-size: 96px;
   line-height: 140%;
 }
+
 .intro__title__first-word {
   color: #FFCB05;
 }
+
 .intro__subtext {
   font-weight: normal;
   font-size: 25px;
   line-height: 204.27%;
   max-width: 1100px;
 }
+
 .intro__image {
   position: absolute;
   z-index: -1;
   width: 110vw;
   left: -110px;
   bottom: -70px;
-  transform: rotate(0);
-  animation: introDrill 60s infinite linear;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  -webkit-animation: introDrill 60s infinite linear;
+          animation: introDrill 60s infinite linear;
 }
+
 .intro__ring {
   opacity: 0.75;
+  -webkit-transition: opacity 1s;
   transition: opacity 1s;
   stroke: #FFCB05;
   stroke-width: 3;
   fill: none;
   opacity: 1;
 }
+
 .intro__ring__2 {
-  opacity: 0.7;
+  opacity: .7;
 }
+
 .intro__ring__3 {
-  opacity: 0.45;
+  opacity: .45;
 }
+
 .intro__ring__4 {
-  opacity: 0.15;
+  opacity: .15;
 }
+
 .intro__ring--hide {
   opacity: 0;
 }
+
 .intro__ring--disable {
   opacity: 0.05;
   stroke-width: 5px;
@@ -236,28 +312,40 @@ body::-webkit-scrollbar {
   border-right: 2px solid #F6F6F6;
   color: #101010;
 }
+
 .about_us__part {
   border: 1px solid black;
 }
+
 .about_us__part--1 {
   margin-top: 100px;
   height: 30%;
 }
+
 .about_us__part--2 {
   height: 70%;
 }
+
 .about_us__title {
   text-transform: uppercase;
 }
+
 .about_us__title--1 {
   font-size: 18px;
   color: #101010;
   margin-bottom: 60px;
 }
+
 .about_us__title--2 {
   color: #fff;
 }
+
 .about_us__content {
   font-size: 25px;
   line-height: 204.27%;
+}
+
+.test {
+  background-color: #fff;
+  border: 1px solid;
 }
