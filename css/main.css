@@ -82,6 +82,18 @@ body::-webkit-scrollbar {
   padding: 0 160px;
 }
 
+.link__click {
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
+}
+
+.link__click:active {
+  -webkit-transform: scale(0.94);
+          transform: scale(0.94);
+}
+
 .header {
   position: fixed;
   display: -webkit-box;
@@ -166,8 +178,14 @@ body::-webkit-scrollbar {
   margin: 0 97px 0 22px;
 }
 
+.header__logo:hover .header__logo__svg__company {
+  fill: #FFCB05;
+}
+
 .header__logo__svg {
   fill: #fff;
+  -webkit-transition: fill .2s ease-in;
+  transition: fill .2s ease-in;
 }
 
 .header__nav {
@@ -185,7 +203,15 @@ body::-webkit-scrollbar {
   font-size: 14px;
   text-transform: uppercase;
   text-decoration: none;
-  margin-right: 65px;
+  margin-right: 35px;
+  padding: 27px 25px;
+  border-bottom: 4px solid transparent;
+  -webkit-transition: border .2s ease;
+  transition: border .2s ease;
+}
+
+.header__link:hover {
+  border-color: #FFCB05;
 }
 
 .header__phone {
@@ -345,7 +371,50 @@ body::-webkit-scrollbar {
   line-height: 204.27%;
 }
 
-.test {
-  background-color: #fff;
-  border: 1px solid;
+.btn__minify {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.btn__learn {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #101010;
+  -webkit-transition: border .2s ease-in-out;
+  transition: border .2s ease-in-out;
+  padding-right: 25px;
+  border-bottom: 2px solid transparent;
+  position: relative;
+}
+
+.btn__learn::after {
+  content: '';
+  position: absolute;
+  top: 35%;
+  right: 15px;
+  -webkit-transition: -webkit-transform .2s ease-in-out;
+  transition: -webkit-transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+  height: 6px;
+  width: 6px;
+  margin-left: 10px;
+  display: inline-block;
+  border-right: 2px solid #101010;
+  border-bottom: 2px solid #101010;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.btn__learn:hover {
+  border-color: #101010;
+}
+
+.btn__learn:hover::after {
+  -webkit-transform: rotate(-45deg) translate(100%, 100%);
+          transform: rotate(-45deg) translate(100%, 100%);
 }
