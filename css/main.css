@@ -85,6 +85,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   scrollbar-width: none;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
