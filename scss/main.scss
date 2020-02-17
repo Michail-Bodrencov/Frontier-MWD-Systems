@@ -195,7 +195,7 @@ $headerHeight:80px;
     // overflow: hidden;
     padding-top: $headerHeight;
     color: #fff;
-    // position: relative;
+    position: relative;
     
 
     &__svg {
@@ -209,6 +209,32 @@ $headerHeight:80px;
 
         &--disable {
             z-index: -4;
+        }
+    }
+    &__circle {
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        opacity: 0.5;
+        border: 2px solid $yellow;
+        transform: translate(-50%,-50%);
+        
+
+        position: absolute;
+        left: 11.4%;
+        top: 51.7%;
+        
+        &--1 {
+            animation: circle--1 7s linear infinite;
+        }
+        &--2 {
+            animation: circle--2 14s linear infinite;
+        }
+        &--3 {
+            animation: circle--3 21s linear infinite;
+        }
+        &--3 {
+            animation: circle--4 28s linear infinite;
         }
     }
     

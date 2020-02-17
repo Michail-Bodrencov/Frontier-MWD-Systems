@@ -27,3 +27,29 @@
       transform: translate3d(0, 0, 0);
     }
   }
+
+  @mixin circle-animate ($number, $fullSizeCircle) {
+    
+    @keyframes circle--#{$number} {
+      0% {
+        height: 200 / 1920 * 100vw;
+        width: 200 / 1920 * 100vw;
+        opacity: 0;
+      }
+      30%{
+        opacity: 1;
+      }
+      100% {
+        height: $fullSizeCircle / 1920 * 100vw;
+        width: $fullSizeCircle  / 1920 * 100vw;
+        opacity: 0;
+      }
+    }
+    
+    
+  }
+
+@include circle-animate (1, 600);
+@include circle-animate (2, 1200);
+@include circle-animate (3, 1800);
+@include circle-animate (4, 2200);

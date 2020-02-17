@@ -58,7 +58,7 @@ let interval1 = setInterval(()=>{
 
     checkRingAnimation(Ring4, 6, 100, 13, 95, 0.02)
 
-},30)
+},40)
 
 
 function checkRingAnimation ( Ring, startSize, endSize, fadeIn=10, fadeOut=90, step=0.1){
